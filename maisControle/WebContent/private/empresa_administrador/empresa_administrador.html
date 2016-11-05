@@ -1,0 +1,224 @@
+
+<div id="cadastro_emp" style="display:block">
+<div id="banner-titulo">
+	<div class="text-center">
+		<div class="row">
+			<h1>Cadastre Sua Empresa</h1>
+		</div>
+	</div>
+</div>
+
+<div class=" col-sm-8 col-sm-offset-2 " style="border: 2px solid #f2f6f9;">
+	<form role="form">
+	<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Nome Fantasia</span> 
+					<input class="form-control" id="nomeFantasia" name="name" placeholder="" type="text" /> 
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Razão Social</span> 
+					<input class="form-control"	id="razaoSocial" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">CNPJ</span> 
+					<input class="form-control" id="cnpj" name="name" placeholder="" type="text" /> 
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">E-mail</span> 
+					<input class="form-control"	id="email" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Telefone</span> 
+					<input class="form-control" id="telefone" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">País</span> 
+					<input class="form-control" id="pais" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Estado</span> 
+					<input class="form-control" id="estado" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Cidade</span> 
+					<input class="form-control" id="cidade" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Endereço</span> 
+					<input class="form-control" id="endereco" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Bairro</span> 
+					<input class="form-control" id="bairro" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Número</span> 
+					<input class="form-control" id="numero" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Complemento</span> 
+					<input class="form-control" id="complemento" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-12">
+				<div class="form-group">
+					<input type="hidden" value="1" name="adicionar_outro"> 
+					<a onclick="MAISCONTROLE.empresa.cadastrar()" id="salvar" class="btn btn-primary btn_azul">Salvar</a> 
+					<a class="btn btn-primary btn_azul" data-dismiss="modal">Cancelar</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+</div>
+
+
+
+<div id="cadastro_adm" style="display:none">
+	<div id="banner-titulo">
+		<div class="text-center">
+			<div class="row">
+				<h1>Cadastro Administrador Master</h1>
+			</div>
+		</div>
+	</div>
+	
+	<div class=" col-sm-8 col-sm-offset-2 " style="border: 2px solid #f2f6f9;">
+	<form role="form">
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Nome Completo</span> 
+					<input class="form-control" id="nomeAdm" name="name" placeholder="" type="text" /> 
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">E-mail</span> 
+					<input class="form-control"	id="emailAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Telefone</span> 
+					<input class="form-control" id="telefoneAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">País</span> 
+					<input class="form-control" id="paisAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Estado</span> 
+					<input class="form-control" id="estadoAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Cidade</span> 
+					<input class="form-control" id="cidadeAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Endereço</span> 
+					<input class="form-control" id="enderecoAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Bairro</span> 
+					<input class="form-control" id="bairroAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Número</span> 
+					<input class="form-control" id="numeroAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Complemento</span> 
+					<input class="form-control" id="complementoAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Senha</span> 
+					<input class="form-control" id="senhaAdm" name="name" placeholder="" type="password" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Confirmar Senha</span> 
+					<input class="form-control" id="confirmaSenhaAdm" name="name" placeholder="" type="password" />
+				</div>
+			</div>
+		</div>
+	
+	<div class="row-fluid ">
+		<div class=" col-sm-12">
+			<div class="form-group">
+				<input type="hidden" value="1" name="adicionar_outro">
+				<a onclick="MAISCONTROLE.usuario.cadastrar()" id="salvar" class="btn btn-primary btn_azul">Salvar</a>   
+				<a class="btn btn-primary btn_azul" data-dismiss="modal">Cancelar</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>	
+

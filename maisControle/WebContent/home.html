@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mais Controle</title>
+	
+	<meta charset="utf8"/>
+	<meta name=description content="Mais Controle"/>
+	<meta name=viewport content="width=device-width, initial-scale=1"/>
+	<link href="public/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="public/css/index.css"     rel="stylesheet" type="text/css" />
+	
+		
+	<script type="text/javascript" src="public/js/ajax.js"></script>
+	<script type="text/javascript" src="public/js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="public/js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="public/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="public/js/bootstrap.js"></script>
+	<script type="text/javascript" src="public/js/bootbox.min.js"></script>
+
+	<script type="text/javascript" src="public/js/home.js"></script>
+
+	<script type="text/javascript" src="private/empresa_administrador/serviceEmpresa_administrador.js"></script>
+	<script type="text/javascript" src="private/empresa_administrador/empresa_administrador.js"></script>
+	<script type="text/javascript" src="public/js/convertBase64.js"></script>
+	<script type="text/javascript" src="public/js/validar.js"></script>
+
+	
+	
+
+			
+	
+</head>
+
+<body>
+
+
+	<div class="container-fluid">
+		<div class="row menu_topo">
+			<div class="col-md-4 col-md-offset-4 " style="text-align: center;">
+				<a href="home.html"><img id="imagem" src="public/imagens/maiscontrole1.png"></a>
+			</div>
+			<div class="col-md-4">
+				<nav role="navigation"class="navbar navbar-default " style="background:#3c6c8c; border-color:#3c6c8c;">
+					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle ">    
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>  
+					<div class="collapse navbar-collapse navbar-right" id="navbarCollapse" style="width: 100%">
+						<ul class="nav navbar-nav" style="float: right;cursor: pointer; ">
+							<li id="button_home"><a href="home.html">Home</a></li>
+							<li id="button_contato"><a href="#contato" class="scroll">Contato</a></li>
+							<li onclick="carregar('public/login.html')"> <a id="button_param">Login</a></li>
+							<li onclick="carregar('private/empresa_administrador/empresa_administrador.html')"><a id="button_menu">Cadastre-se</a></li>	
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+
+
+	
+	<div class="container-fluid" id="home" style="background: #fafafa;">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 "> 
+				<figure class="foto-legenda">
+					<img id="imagem_home" src="public/imagens/home.jpg" >
+					<figcaption >
+						<h1 style="line-height: 50px;margin-top: 20%">Você tem um negócio.<br>Nós temos o CONTROLE.</h1>
+						<h3>MAIS CONTROLE, o sistema para a gestão de seu negócio. </h3>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+
+		<div class="row" >
+			<div class="col-md-8 col-md-offset-2" style="margin-top: 15px; margin-bottom: 15px;">
+
+				<h2 style="text-align: center;font-weight: 300;color: #666;">A melhor maneira de gerir seu negócio</h2>
+				<h3 style="text-align: center; color: #666;">Descubra o mais completo sistema de  gestão empresarial para pequenas e médias empresas</h3>	
+			</div>
+		</div>
+
+		<div class="row col-md-10 col-md-offset-1" >
+			<div class="col-md-3 col-md-offset-1 topicos">
+				<div class="features-box-icon">
+					<span aria-hidden="true" class="typcn typcn-ticket"></span>
+				</div>
+				<img src="public/imagens/economia.png" height="76" width="77">
+				<h3>Economia</h3>
+				<p>Não gaste dinheiro em computadores e técnicos! Nosso software não precisa ser instalado nos computadores de sua empresa.</p>
+			</div>
+			<div class="col-md-3 col-md-offset-1 topicos">
+				<div class="features-box-icon">
+					<span aria-hidden="true" class="typcn typcn-device-phone"></span>
+				</div>
+				<img src="public/imagens/mobilidade.png" height="76" width="77">
+				<h3>Mobilidade de acesso</h3>
+				<p>Desfrute das vantagens de um sistema 100% web, de fácil aprendizado, utilização, e hospedado na nuvem. Você e seus representantes podem gerenciar a empresa e fechar negócio de qualquer lugar do mundo.</p>
+			</div>
+			<div class="col-md-3 col-md-offset-1  topicos">                 
+				<div class="features-box-icon">
+					<span aria-hidden="true" class="typcn typcn-group-outline"></span>
+				</div>
+				<img src="public/imagens/seguracao.png" height="76" width="77">
+				<h3>Segurança da informação</h3>
+				<p>Não ocupe mais espaço com documentos em papel. Proteja suas informações da degradação do tempo e acidentes na empresa, mantendo-as armazenadas nos melhores data center do mundo, altamente escaláveis e estáveis.</p>
+			</div>
+		</div>
+
+		<div class="row col-md-10 col-md-offset-1">
+			<div class="col-md-3 col-md-offset-1 topicos ">
+				<div class="features-box-icon">
+					<span aria-hidden="true" class="typcn typcn-thumbs-ok"></span>
+				</div>
+				<img src="public/imagens/facil de usar.png" height="76" width="77">
+				<h3>Fácil de Usar</h3>
+				<p>Faça a gestão de seu negócio com praticidade. Com um layout intuitivo, as principais ferramentas estão ao seu alcance.</p>
+			</div>
+			<div class="col-md-3 col-md-offset-1 topicos ">
+				<div class="features-box-icon">
+					<span aria-hidden="true" class="typcn typcn-lock-closed"></span>
+				</div>
+				<img src="public/imagens/seguracao.png" height="76" width="77">
+				<h3>Segurança</h3>
+				<p>Não perca seus dados por roubo, acidentes ou ataques virtuais. O backup de segurança fica por nossa conta.</p>
+			</div>
+			<div class="col-md-3 col-md-offset-1 topicos ">
+				<div class="features-box-icon">
+					<span aria-hidden="true" class="typcn typcn-cloud-storage"></span>
+				</div>
+				<img src="public/imagens/nuvem.png" height="76" width="77">
+				<h3>Praticidade na Nuvem</h3>
+				<p>Faça a gestão de sua empresa onde estiver! O Mais Controle esta ao seu alcance em qualquer lugar com conexão à internet</p>
+			</div>
+		</div>
+
+
+	
+		<div id="contato" class="row col-md-12" style=" padding: 40px 0;background: #3c6c8c; width: auto">
+			<div class="col-md-4">
+				<strong><i class="glyphicon glyphicon-home"></i> Sobre o Mais Controle</strong>
+				<p id="texto_rodape">
+					O MAIS CONTROLE é um sistema de gestão completo para seu negócio. Com ele você pode controlar seu estoque, registrar suas vendas, fazer orçamentos, cadastrar clientes, produtos, fornecedores e muito mais!
+				</p>
+			</div>
+			<div class="col-md-4">
+				<strong><i class="glyphicon glyphicon-globe"></i> Endereço</strong>
+				<address id="texto_rodape">Rua Presidente Prudente de Moraes, nº 610, Joinville-ES.<br> 
+					CEP: 89218-000</address>
+			</div>
+			<div class="col-md-4">
+				<strong><i class="glyphicon glyphicon-earphone"></i> Fale conosco</strong>
+				<ul id="texto_rodape" class="list-filiais">
+					<li>55 47 9923-3613</li>
+					<li>55 47 3427-4505</li>
+				</ul>
+				<p id="texto_rodape">alexandreferreira.xande@gmail.com</p>
+			</div>	
+		</div>
+	</div>
+
+
+</body>
+		
+
+</html>

@@ -1,0 +1,168 @@
+	<script type="text/javascript" src="private/administrador/serviceAdministrador.js"></script>
+	<script type="text/javascript" src="private/administrador/administrador.js"></script>
+	<script type="text/javascript" src="public/js/validar.js"></script>
+	
+		<div class="" id="produtos">
+			<div class="row-fluid col-sm-10 barra_topo">
+				<ul class="nav nav-pills" style="padding-top: 25px;">
+					<a id="texto_azul" href="">Dolt</a>
+					<span class="divider">/</span>
+					<a id="texto_azul" href="">Administrador</a>
+				</ul>
+			</div>
+
+
+			<div class="row-fluid col-sm-10 menu_pesquisa ">
+				<div class="">
+					<button type="button" class="btn btn_verde" onclick="botao_adm()" data-toggle="modal"
+						data-target="#myModal">Cadastrar Administrador</button>
+				</div>
+			</div>
+			<div class="row-fluid col-sm-10 menu_filtro">
+				
+				<form class="form-inline">
+					<div class="form-group">
+						<label for="exampleInputName2">Nome</label> <input type="text"
+							class="form-control" id="consultarAdministrador" placeholder="">
+					</div>
+					
+					<button onClick="MAISCONTROLE.administrador.buscar()" type="button"
+						class="btn btn-default">Filtrar</button>
+				</form>
+			</div>
+			<div class="row-fluid col-sm-10">
+				<div class="table-responsive  " style="background-color: #FFFFFF;">
+					<table class="table table-striped" cellspacing="0" cellpadding="0"
+						id="resultadoAdministradores">
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog ">
+
+			<!-- Modal content-->
+			<div class="modal_conteudo">
+				<div class="modal-header modal_titulo">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="titulo_menu_modal">
+						<i class="glyphicon glyphicon-user"></i> Cadastro de administrador
+					</h3>
+				</div>
+
+				<div class="modal_formulario">
+
+					<form role="form" id="form-myform">
+						
+						<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Nome Completo</span> 
+					<input class="form-control" id="nomeAdm" name="name" placeholder="" type="text" /> 
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">E-mail</span> 
+					<input class="form-control"	id="emailAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Telefone</span> 
+					<input class="form-control" id="telefoneAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">País</span> 
+					<input class="form-control" id="paisAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Estado</span> 
+					<input class="form-control" id="estadoAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-3">
+				<div class="form-group ">
+					<span class="texto-label">Cidade</span> 
+					<input class="form-control" id="cidadeAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Endereço</span> 
+					<input class="form-control" id="enderecoAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Bairro</span> 
+					<input class="form-control" id="bairroAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Número</span> 
+					<input class="form-control" id="numeroAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Complemento</span> 
+					<input class="form-control" id="complementoAdm" name="name" placeholder="" type="text" />
+				</div>
+			</div>
+		</div>
+<div class="row-fluid ">
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Senha</span> 
+					<input class="form-control" id="senhaAdm" name="name" placeholder="" type="password" />
+				</div>
+			</div>
+			<div class=" col-sm-6">
+				<div class="form-group ">
+					<span class="texto-label">Confirmar Senha</span> 
+					<input class="form-control" id="confirmaSenhaAdm" name="name" placeholder="" type="password" />
+				</div>
+			</div>
+		</div>
+						
+						
+						
+
+					<input type="hidden" id="id_produto" name="id_produto" />
+								<div class="form-group ">
+									
+									<a onclick="MAISCONTROLE.administrador.cadastrar(1)" id="salvar" class="btn btn-primary btn_azul">Salvar</a> 
+									<a onclick="MAISCONTROLE.administrador.cadastrar(2)" id="cadastrar_outro" class="btn btn-primary btn_azul">Salvar e cadastrar outro</a> 
+									<a class="btn btn_cinza btn_cancel" data-dismiss="modal">Cancelar</a>
+								</div>		
+							
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</head>
