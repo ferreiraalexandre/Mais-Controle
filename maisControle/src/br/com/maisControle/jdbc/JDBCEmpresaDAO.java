@@ -55,7 +55,7 @@ public class JDBCEmpresaDAO implements EmpresaDAO {
 	
 	public Usuario login(Usuario usuario) {
 		Usuario resultado = null;
-		String sqls = "SELECT e_mail, senha, empresa_id_empresa, id_usuario " + "FROM usuario "
+		String sqls = "SELECT e_mail, senha, empresa_id_empresa, id_usuario, tipo_de_usuario " + "FROM usuario "
 				+ "where e_mail='" + usuario.getEmail() + "' and senha='"
 				+ usuario.getSenha() + "'";
 		try {
@@ -67,6 +67,7 @@ public class JDBCEmpresaDAO implements EmpresaDAO {
 				resultado.setEmpresa(new Empresa());
 				resultado.getEmpresa().setId_empresa(rs.getInt("empresa_id_empresa"));
 				resultado.setId(rs.getInt("id_usuario"));
+				resultado.setTipo(rs.getString("tipo_de_usuario"));
 
 		}
 		} catch (SQLException e) {

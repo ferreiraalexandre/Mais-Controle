@@ -33,13 +33,13 @@ public class ProdutoService {
 		}
 	}
 
-	public List<Produto> buscarProdutosPorNome(String nome, String codigo, int id) throws ProdutoException {
+	public List<Produto> buscarProdutosPorNome(String nome, String codigo, int id, String tipoUsuario) throws ProdutoException {
 		Conexao conec = new Conexao();
 		List<Produto> produtos = new ArrayList<Produto>();
 		try {
 			Connection conexao = conec.abrirConexao();
 			JDBCProdutoDAO jdbcProduto = new JDBCProdutoDAO(conexao);
-			produtos = jdbcProduto.buscarPorNome(nome, codigo, id);
+			produtos = jdbcProduto.buscarPorNome(nome, codigo, id, tipoUsuario);
 
 		} catch (ProdutoException e) {
 			throw e;

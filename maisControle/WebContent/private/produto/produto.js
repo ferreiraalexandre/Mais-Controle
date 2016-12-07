@@ -130,7 +130,11 @@ MAISCONTROLE.produto.exibirProdutos = function(listaDeProdutos, valorBusca,
 					'valor1' : valorBusca,
 					'valor2' : valorBuscaCodigo
 				},
-				success : function(listaDeProdutos) {
+				success : function(listaDeProdutos) {debugger;
+					if(listaDeProdutos[0].tipoUsuario="representante"){
+						$("#opcaoRepresentante").css("display", "none") 
+				}
+					
 					console.log(listaDeProdutos)
 					MAISCONTROLE.produto.exibirProdutos(listaDeProdutos);
 				},

@@ -45,7 +45,7 @@ public class JDBCProdutoDAO implements ProdutoDAO {
 	return true;
 }
 
-	public List<Produto> buscarPorNome(String nome,String codigo,int id) throws ProdutoException {
+	public List<Produto> buscarPorNome(String nome,String codigo,int id, String tipoUsuario) throws ProdutoException {
 	
 		String comando = "select * from produto where empresa_id_empresa= " +id  ;
 		if (!nome.equals("null") && !nome.equals("")) {
@@ -75,6 +75,7 @@ public class JDBCProdutoDAO implements ProdutoDAO {
 				produto.setQuantidade(rs.getInt("quantidade"));
 				produto.setEstoque_minimo(rs.getInt("estoque_minimo"));
 				produto.setEstoque_maximo(rs.getInt("estoque_maximo"));
+				produto.setTipoUsuario(tipoUsuario);
 				listProduto.add(produto);
 			}
 			

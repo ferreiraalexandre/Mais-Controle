@@ -10,6 +10,7 @@ public class Produto implements Serializable {
 	private String nome;
 	private String categoria;
 	private String fornecedor;
+	private String tipoUsuario;
 	private float preco_venda;
 	private float preco_custo;
 	private int quantidade;
@@ -84,6 +85,12 @@ public class Produto implements Serializable {
 	}
 	public void setEstoque_maximo(int estoque_maximo) {
 		this.estoque_maximo = estoque_maximo;
+	}
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
 	}
 	
 

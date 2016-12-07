@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.core.Response;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -14,6 +13,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
@@ -51,10 +51,15 @@ public class ProdutoRest extends UtilRest {
 	{
 		try {
 			List<Produto> produtos = new ArrayList<Produto>();
-			ProdutoService service= new ProdutoService(); 
+			ProdutoService service= new ProdutoService();
+			
 			int id= getEmpresa().getId_empresa();
-            produtos =service.buscarProdutosPorNome(nome,codigo,id);
+			String TipoUsuario= getUsuario().getTipo();
+			
+            produtos =service.buscarProdutosPorNome(nome,codigo,id,TipoUsuario);
+            
 			return this.buildResponse(produtos);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			return this.buildErrorResponse(e.getMessage());
